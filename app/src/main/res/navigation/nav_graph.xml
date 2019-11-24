@@ -85,7 +85,7 @@
         tools:layout="@layout/fragment_pasta_normal" />
     <fragment
         android:id="@+id/nav_sign_out"
-        android:name="com.example.ecommerceappfinalproject.ui.SignOut"
+        android:name="com.example.ecommerceappfinalproject.ui.signOut.SignOut"
         android:label="SignOut" />
 
 </navigation>

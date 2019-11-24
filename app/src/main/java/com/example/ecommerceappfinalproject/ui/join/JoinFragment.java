@@ -42,94 +42,71 @@ public class JoinFragment extends Fragment implements View.OnClickListener {
     private EditText inputEmail, inputPassword;
     private Button joinButton;
     private FirebaseAuth mAuth;
-    private ImageView google, facebook, twitter;
-
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         //set Navigation
-        navigation = NavHostFragment.findNavController (this);
+        navigation = NavHostFragment.findNavController ( this );
 
         //inflate layout
-        View root = inflater.inflate(R.layout.fragment_join, container, false);
+        View root = inflater.inflate ( R.layout.fragment_join, container, false );
 
         //set Firebase
-        mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance ();
 
         //set Views
-        inputEmail = root.findViewById(R.id.join_email);
-        inputPassword = root.findViewById(R.id.join_pswd);
-        joinButton = root.findViewById(R.id.join_button);
+        inputEmail = root.findViewById ( R.id.join_email );
+        inputPassword = root.findViewById ( R.id.join_pswd );
+        joinButton = root.findViewById ( R.id.join_button );
 
-        joinButton.setOnClickListener(this);
-        facebook.setOnClickListener (this);
-        twitter.setOnClickListener (this);
-        google.setOnClickListener (this);
-
+        joinButton.setOnClickListener ( this );
         return root;
     }
 
 
-
     @Override
     public void onClick(View view) {
-        int id = view.getId();
+        int id = view.getId ();
         switch (id) {
             case R.id.join_button:
-                createUserWithEmailAndPassword();
+                createUserWithEmailAndPassword ();
                 break;
 
         }
     }
 
 
+    public void createUserWithEmailAndPassword() {
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        //FirebaseUser currentUser = mAuth.getCurrentUser();
-
-    }
-
-
-
-    public void createUserWithEmailAndPassword(){
-
-        String email = inputEmail.getText().toString();
-        String pswd = inputPassword.getText().toString();
-        if (TextUtils.isEmpty(email))
-        {
-            inputEmail.setError("Insert your Email");
-            inputEmail.requestFocus();
-        }
-        else if (TextUtils.isEmpty(pswd))
-        {
-            inputPassword.setError("Insert your password");
-            inputPassword.requestFocus();
-        }
-        else {
-            mAuth.createUserWithEmailAndPassword(email, pswd)
-                    .addOnCompleteListener( getActivity (), new OnCompleteListener<AuthResult>() {
+        String email = inputEmail.getText ().toString ();
+        String pswd = inputPassword.getText ().toString ();
+        if (TextUtils.isEmpty ( email )) {
+            inputEmail.setError ( "Insert your Email" );
+            inputEmail.requestFocus ();
+        } else if (TextUtils.isEmpty ( pswd )) {
+            inputPassword.setError ( "Insert your password" );
+            inputPassword.requestFocus ();
+        } else {
+            mAuth.createUserWithEmailAndPassword ( email, pswd )
+                    .addOnCompleteListener ( getActivity (), new OnCompleteListener<AuthResult> () {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()) {
+                            if (task.isSuccessful ()) {
                                 // Sign in success, update UI with the signed-in user's information
-                                FirebaseUser user = mAuth.getCurrentUser();
-                                Toast.makeText(getContext(), "Account created", Toast.LENGTH_SHORT).show();
+                                FirebaseUser user = mAuth.getCurrentUser ();
+                                Toast.makeText ( getContext (), "Account created", Toast.LENGTH_SHORT ).show ();
                                 Intent intent = new Intent ( getActivity (), MainActivity.class );
                                 startActivity ( intent );
-                                getActivity ().finish();
+                                getActivity ().finish ();
 
                             } else {
                                 // If sign in fails, display a message to the user.
-                                Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                                Toast.makeText(getContext(), "Authentication failed.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText ( getContext (), "Authentication failed.", Toast.LENGTH_SHORT ).show ();
 
                             }
                         }
-                    });
+                    } );
         }
     }
 
