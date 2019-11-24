@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_login"
+            android:title="Login" />
+        <item
+            android:id="@+id/nav_join"
+            android:title="Create account" />
+        <item
+            android:id="@+id/nav_sign_out"
+            android:title="Sign Out"/>
+
+    </group>
+
+    <item android:title="Pasta">
+
+        <menu>
+            <item
+                android:id="@+id/nav_pasta_integrale"
+                android:title="Pasta Integrale" />
+            <item
+                android:id="@+id/nav_pasta_normale"
+                android:title="Pasta Normale" />
+
+        </menu>
+
+
+    </item>
+    <item android:title="Conserve">
+
+        <menu>
+            <item
+                android:id="@+id/nav_al_naturale"
+                android:title="Al Naturale" />
+            <item
+                android:id="@+id/nav_marmellate"
+                android:title="Marmellate" />
+            <item
+                android:id="@+id/nav_sotto_olio"
+                android:title="Sotto Olio" />
+
+        </menu>
+
+
+    </item>
+    <item android:title="Special">
+
+        <menu>
+            <item
+                android:id="@+id/nav_birre"
+                android:title="Birre" />
+            <item
+                android:id="@+id/nav_legumi"
+                android:title="Legumi e Creme" />
+
+            <item
+                android:id="@+id/nav_olio"
+                android:title="Olio" />
+
+        </menu>
+
+
+    </item>
+
+</menu>

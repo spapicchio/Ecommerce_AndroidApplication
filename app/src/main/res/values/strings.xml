@@ -1,0 +1,86 @@
+<resources>
+
+    <!-- login layout -->
+    <string name="login">Sign in</string>
+    <string name="login_button_main">Already have an account? Log In</string>
+    <string name="login_button">sign in</string>
+    <string name="login_phone_number">Phone number</string>
+    <string name="login_password">Password</string>
+    <string name="login_remember_me_chkb">Remember me</string>
+    <string name="login_forget_pswd">Forget password</string>
+    <string name="login_join_username">Insert the username</string>
+    <string name="login_differents">Or Signup with</string>
+
+
+    <!-- join layout -->
+    <string name="join">Join us</string>
+    <string name="join_button">join us</string>
+    <string name="join__button_main">Do not you have an account? Join now</string>
+    <string name="join_differents">Or Signup with</string>
+    <!-- ? -->
+    <string name="app_name">EcommerceApp</string>
+    <string name="app_slogan">All the typical Gargano products </string>
+
+    <!-- product layout -->
+    <string name="product_new">New Product</string>
+
+
+    <!-- loading layout -->
+    <string name="loading">Loading</string>
+    <!-- special layout -->
+    <string name="special">Special</string>
+
+    <!-- Item Selected layout -->
+    <string name="item_selected_product_name">Product Name: </string>
+    <string name="item_selected_provenience">Provenience: </string>
+    <string name="item_selected_price">Price: </string>
+    <string name="item_selected_buy_now">Acquire now</string>
+    <string name="item_selected_ingredients">Ingredients: </string>
+
+    <!-- pasta layout -->
+    <string name="pasta">Pasta</string>
+
+    <!-- home layout -->
+    <string name="home_title">All the typical Gargano products</string>
+    <!-- conserve layout -->
+    <string name="conserve">Preserves</string>
+
+    <!-- activity home drawer -->
+    <string name="product">Product</string>
+
+
+    <!-- HomeActivity.java-->
+    <string name="toolbar_title">Home</string>
+
+
+    <!-- Navigation drawer -->
+    <string name="nav_header_title">User name</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_item_cart">Cart</string>
+    <string name="menu_item_settings">Settings</string>
+    <string name="menu_item_categories">Slideshow</string>
+    <string name="menu_item_logout">Tools</string>
+    <string name="menu_item_orders">Share</string>
+    <string name="menu_send">Send</string>
+
+
+    <!-- ProductDatabase.java -->
+    <string name="senatore_cappelli">Senatore Cappelli</string>
+    <string name="ingredients_pasta_senatore_cappelli">Organic Senatore Cappelli durum wheat semolina and water</string>
+    <string name="pasta_provenence_cerignola">Tavogliere delle puglie, Cerignola</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_example_conserve">exampleConserve</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_pasta">PastaActivity</string>
+    <string name="title_activity_specials_tabbed">SpecialsTabbedActivity</string>
+
+</resources>

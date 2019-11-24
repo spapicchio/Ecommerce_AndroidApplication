@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.ecommerceappfinalproject.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_sottoOlioFragment"
+            app:destination="@id/nav_sotto_olio" />
+        <action
+            android:id="@+id/action_nav_home_to_legumiCremeFragment"
+            app:destination="@id/nav_legumi" />
+        <action
+            android:id="@+id/action_nav_home_to_marmellateFragment"
+            app:destination="@id/nav_marmellate" />
+        <action
+            android:id="@+id/action_nav_home_to_pastaIntegraleFragment"
+            app:destination="@id/nav_pasta_integrale" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.example.ecommerceappfinalproject.ui.login.LoginFragment"
+        android:label="LogIn"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_nav_login_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_join"
+        android:name="com.example.ecommerceappfinalproject.ui.join.JoinFragment"
+        android:label="Join"
+        tools:layout="@layout/fragment_join" >
+        <action
+            android:id="@+id/action_nav_join_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_sotto_olio"
+        android:name="com.example.ecommerceappfinalproject.ui.conserve.SottoOlioFragment"
+        android:label="Sotto olio"
+        tools:layout="@layout/fragment_sotto_olio" />
+    <fragment
+        android:id="@+id/nav_legumi"
+        android:name="com.example.ecommerceappfinalproject.ui.specials.LegumiCremeFragment"
+        android:label="Legumi e Creme"
+        tools:layout="@layout/fragment_legumi_creme" />
+    <fragment
+        android:id="@+id/nav_marmellate"
+        android:name="com.example.ecommerceappfinalproject.ui.conserve.MarmellateFragment"
+        android:label="Marmellate"
+        tools:layout="@layout/fragment_marmellate" />
+    <fragment
+        android:id="@+id/nav_pasta_integrale"
+        android:name="com.example.ecommerceappfinalproject.ui.pasta.PastaIntegraleFragment"
+        android:label="Pasta Integrale"
+        tools:layout="@layout/fragment_pasta_integrale" />
+    <fragment
+        android:id="@+id/nav_birre"
+        android:name="com.example.ecommerceappfinalproject.ui.specials.BeerFragment"
+        android:label="Beer"
+        tools:layout="@layout/fragment_beer" />
+    <fragment
+        android:id="@+id/nav_al_naturale"
+        android:name="com.example.ecommerceappfinalproject.ui.conserve.AlNaturaleFragment"
+        android:label="Al Naturale"
+        tools:layout="@layout/fragment_al_naturale" />
+    <fragment
+        android:id="@+id/nav_olio"
+        android:name="com.example.ecommerceappfinalproject.ui.specials.OlioFragment"
+        android:label="Olio"
+        tools:layout="@layout/fragment_olio" />
+    <fragment
+        android:id="@+id/nav_pasta_normale"
+        android:name="com.example.ecommerceappfinalproject.ui.pasta.PastaNormalFragment"
+        android:label="Pasta Normale"
+        tools:layout="@layout/fragment_pasta_normal" />
+    <fragment
+        android:id="@+id/nav_sign_out"
+        android:name="com.example.ecommerceappfinalproject.ui.SignOut"
+        android:label="SignOut" />
+
+</navigation>
